@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cronentries>
+ <!--<cron>
+    <url>/cron/update-comingsoon-movie</url>
+    <description>/cron/update-comingsoon-movie</description>
+    <schedule>everyday 20:10</schedule>
+    <timezone>Asia/Taipei</timezone> 
+  </cron>   -->
+  <cron>
+    <url>/cron/update-movie</url>
+    <description>/cron/update-movie</description>
+    <schedule>everyday 07:40</schedule>
+    <timezone>Asia/Taipei</timezone>
+  </cron>
+   <cron>
+    <url>/cron/update-theater</url>
+    <description>/cron/update-theater</description>
+    <schedule>everyday 07:50</schedule>
+    <timezone>Asia/Taipei</timezone>
+  </cron>
+</cronentries>

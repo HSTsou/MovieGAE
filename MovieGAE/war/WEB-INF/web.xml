@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+	<servlet>
+		<servlet-name>UpdateMovie</servlet-name>
+		<servlet-class>com.handsome.servlet.UpdateMovieServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateMovie</servlet-name>
+		<url-pattern>/cron/update-movie</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>UpdateComingSoonMovie</servlet-name>
+		<servlet-class>com.handsome.servlet.UpdateComingSoonMovieServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateComingSoonMovie</servlet-name>
+		<url-pattern>/cron/update-comingsoon-movie</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>UpdateTheater</servlet-name>
+		<servlet-class>com.handsome.servlet.UpdateTheaterServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateTheater</servlet-name>
+		<url-pattern>/cron/update-theater</url-pattern>
+	</servlet-mapping>
+
+
+	
+	<servlet>
+		<servlet-name>PlayingMvIds</servlet-name>
+		<servlet-class>com.handsome.servlet.PlayingMvIdsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PlayingMvIds</servlet-name>
+		<url-pattern>/playing-mv-ids</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AllMvServlet</servlet-name>
+		<servlet-class>com.handsome.servlet.AllMvServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AllMvServlet</servlet-name>
+		<url-pattern>/all-mv</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>AllThServlet</servlet-name>
+		<servlet-class>com.handsome.servlet.AllThServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AllThServlet</servlet-name>
+		<url-pattern>/all-th</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ComingSoonMvServlet</servlet-name>
+		<servlet-class>com.handsome.servlet.ComingSoonMvServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ComingSoonMvServlet</servlet-name>
+		<url-pattern>/all-coming-mv</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>MvInfoServlet</servlet-name>
+		<servlet-class>com.handsome.servlet.MvInfoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MvInfoServlet</servlet-name>
+		<url-pattern>/mvInfo</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ThInfoServlet</servlet-name>
+		<servlet-class>com.handsome.servlet.ThInfoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ThInfoServlet</servlet-name>
+		<url-pattern>/thInfo</url-pattern>
+	</servlet-mapping>
+	
+	
+	<security-constraint>
+		<web-resource-collection>
+			<url-pattern>/cron/*</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>admin</role-name>
+		</auth-constraint>
+	</security-constraint>
+	
+	<security-constraint>
+		<web-resource-collection>
+			<url-pattern>/admin/*</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>admin</role-name>
+		</auth-constraint>
+	</security-constraint>
+	
+	
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+
+</web-app>
